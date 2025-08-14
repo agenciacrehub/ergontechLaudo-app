@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Utilitários customizados */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* Exemplo: src/index.css */
+.sidebar-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background: #1a2341; /* cor do fundo da barra */
+  }
+  
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: #1a2341; /* cor da barra de rolagem */
+    border-radius: 8px;
+  }
+  
+  .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #1a2341; /* cor ao passar o mouse */
+  }
+
+/* Estilos para o gráfico Gantt */
+.grid-cols-30 {
+  grid-template-columns: repeat(30, minmax(25px, 1fr));
+}
+
+.gantt-container {
+  position: relative;
+  background: white;
+}
+
+.gantt-container::after {
+  content: '';
+  position: absolute;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e5e7eb;
+}
+
+/* Animação suave para as barras do Gantt */
+.gantt-container [class*="bg-"] {
+  transition: all 0.3s ease;
+}
+
+.gantt-container [class*="bg-"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilo para o tooltip das barras */
+.gantt-container [title] {
+  position: relative;
+}
+
+.gantt-container [title]:hover::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  font-size: 12px;
+  white-space: pre;
+  border-radius: 4px;
+  z-index: 10;
+}

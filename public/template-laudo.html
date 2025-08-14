@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template de Laudo de Avaliação Ergonômica Preliminar (AEP)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+            /* gray-800 */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            background-color: #079DAB;
+            /* emerald-500 */
+            color: white;
+            padding: 8px 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #d1d5db;
+            /* gray-300 */
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            /* gray-100 */
+            font-weight: 600;
+        }
+
+        .header-logo {
+            max-width: 150px;
+        }
+
+        .ergon-header {
+            margin: 0 auto;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .ergon-header img {
+            width: 80px;
+            margin-right: 8px;
+        }
+
+        .company-info h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #079DAB;
+        }
+
+        #legislacao ul li a {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            font-size: 0.875rem;
+            color: #4b5563;
+            /* gray-600 */
+        }
+
+        .risk-low {
+            background-color: #d1fae5;
+        }
+
+        /* green-100 */
+        .risk-medium {
+            background-color: #fef3c7;
+        }
+
+        /* amber-100 */
+        .risk-high {
+            background-color: #fee2e2;
+        }
+
+        /* red-100 */
+        .risk-critical {
+            background-color: #fca5a5;
+        }
+
+        /* red-300 */
+
+        .priority-critical {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .priority-high {
+            background-color: #f97316;
+            color: white;
+        }
+
+        .priority-moderate {
+            background-color: #f59e0b;
+            color: white;
+        }
+
+        .priority-low {
+            background-color: #84cc16;
+            color: white;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <div class="container p-4 md:p-8 bg-white shadow-lg my-8 rounded-lg">
+
+        <!-- Cabeçalho -->
+        <header class="border-b pb-6 mb-6">
+            <div class="flex ergon-header items-center">
+                <div class="logo">
+                    <img src="https://ergontech.net/images/Logo_ErgonTech.png" alt="Logo ErgonTech">
+                </div>
+                <div class="company-info">
+                    <h1>ErgonTech</h1>
+                    <p>CNPJ: 51.317.376/0001-65</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center client-header">
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl font-bold text-gray-800">AVALIAÇÃO ERGONÔMICA PRELIMINAR (AEP)</h1>
+                    <p class="text-md text-gray-600 mt-1">METODOLOGIA ERGONTECH PARA EMPRESAS</p>
+                    <p class="text-sm text-red-600 font-semibold mt-2">MATERIAL DISPONIBILIZADO SOMENTE PARA USO DA
+                        EMPRESA
+                        SENDO PROIBIDA A REPRODUÇÃO</p>
+                </div>
+                <img src="https://placehold.co/200x200/facc15/1f2937?text=LOGO" alt="Logo da Empresa"
+                    class="header-logo mt-4 md:mt-0 rounded-full">
+            </div>
+        </header>
+
+        <!-- Seção de Identificação -->
+        <section id="identificacao">
+            <h2 class="section-title">IDENTIFICAÇÃO</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="bg-gray-50 p-3 rounded"><strong>Empresa:</strong> [Nome da Empresa]</div>
+                <div class="bg-gray-50 p-3 rounded"><strong>CNPJ:</strong> [00.000.000/0000-00]</div>
+                <div class="bg-gray-50 p-3 rounded col-span-1 md:col-span-2"><strong>Endereço:</strong> [Endereço
+                    Completo]</div>
+                <div class="bg-gray-50 p-3 rounded"><strong>CNAE (atividade principal):</strong> [Código e Descrição]
+                </div>
+                <div class="bg-gray-50 p-3 rounded"><strong>Grau de risco:</strong> [Número]</div>
+            </div>
+        </section>
+
+        <!-- Demanda e Objetivos -->
+        <section id="demanda_objetivos">
+            <h2 class="section-title">1. DEMANDA</h2>
+            <p class="mb-4 p-3 bg-gray-50 rounded">
+                [DEMANDA_CONTENT]
+            </p>
+
+            <h2 class="section-title">2. OBJETIVOS</h2>
+            <p class="p-3 bg-gray-50 rounded">
+                [OBJETIVOS_CONTENT]
+            </p>
+        </section>
+
+        <!-- Metodologia -->
+        <section id="metodologia">
+            <h2 class="section-title">3. METODOLOGIA</h2>
+            <p class="p-3 bg-gray-50 rounded">
+                [METODOLOGIA_CONTENT]
+            </p>
+        </section>
+
+        <!-- Setores Avaliados -->
+        <section id="setores">
+            <h2 class="section-title">4. SETORES AVALIADOS</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="w-16">Nº</th>
+                            <th>Setor</th>
+                            <th>Descrição</th>
+                            <th class="w-24">Funcionários</th>
+                        </tr>
+                    </thead>
+                    <tbody id="setores-tbody">
+                        <!-- Dados dos setores serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Riscos e Soluções -->
+        <section id="riscos">
+            <h2 class="section-title">11. RISCOS IDENTIFICADOS E SOLUÇÕES</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="w-16">Nº</th>
+                            <th>Risco Identificado</th>
+                            <th>Solução Proposta</th>
+                            <th class="w-24">Prioridade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riscos-tbody">
+                        <!-- Dados dos riscos serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Referências Técnicas -->
+        <section id="referencias">
+            <h2 class="section-title">REFERÊNCIAS TÉCNICAS</h2>
+            <div class="p-3 bg-gray-50 rounded">
+                [REFERENCIAS_CONTENT]
+            </div>
+        </section>
+
+        <!-- Encerramento -->
+        <section id="encerramento" class="mt-8 pt-6 border-t">
+            <h2 class="section-title">ENCERRAMENTO</h2>
+            <p class="mb-4 p-3 bg-gray-50 rounded">Esta Avaliação Ergonômica Preliminar (AEP) contém [Número] páginas,
+                devidamente numeradas. Validade: [Data], ou até haver qualquer alteração no modo operatório...</p>
+            <p class="text-center my-6">Teresina - PI, [Data de Emissão].</p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center p-6 text-white rounded-lg shadow-lg"
+                style="background-color: #079DAB; width: fit-content; margin: 0 auto;">
+                <img src="https://ergontech.net/images/perfil-neide.png" alt="Foto da Fisioterapeuta"
+                    class="w-32 h-32 rounded-full border-4 border-white object-cover mr-0 md:mr-8 mb-4 md:mb-0">
+                <div class="text-center md:text-left mr-8">
+                    <h3 class="text-2xl font-bold">Dra. Francineide Dias</h3>
+                    <p class="text-lg">Fisioterapeuta Ergonomista</p>
+                    <p class="mt-1">CREFITO: 329866-FPI</p>
+                </div>
+                <div class="assign">
+                    <img src="https://placehold.co/160x40/facc15/1f2937?text=Assinatura" alt="Assinatura"
+                        class="mr-4 ml-4 md:mt-0">
+                    <hr class="mt-2">
+                    <p class="text-sm text-center">Assinatura Digital</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bibliografia -->
+        <section id="bibliografia" class="mt-8 pt-6 border-t">
+            <h2 class="section-title">BIBLIOGRAFIA LEGAL / NORMATIVA / TÉCNICA</h2>
+            <ul class="list-disc list-inside space-y-1 p-3 bg-gray-50 rounded text-sm">
+                <li>NR 17 atualizada em 2022</li>
+                <li>MANUAL DE APLICAÇÃO DA NORMA REGULAMENTADORA Nº 17. - 2° ED. - BRASÍLIA: MTE, SIT, 2002.</li>
+                <li>Norma ABNT NBR 13966: 2008</li>
+                <li>Norma ABNT NBR 13962: 2002</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 pt-6 border-t footer-info">
+            <p>ErgonTech - CNPJ: 51.317.376/0001-65</p>
+            <address>Rua Professor Elenir Costa Largo, Nº 4515, Bairro Angelim, CEP 64034-170</address>
+            <p>Email: atendimento@ergontech.net | Telefone: (86) 99451-6516 | Website: ergontech.net</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
